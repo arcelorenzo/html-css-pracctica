@@ -1,116 +1,84 @@
-function cambiarIdioma(lang) {
-  const textos = {
-    es: {
-      principal: "¡Hola mundo! Soy Lorenzo",
-      sub: "Este es mi primer proyecto guardado en GitHub.",
-      datos: "👤 Datos sobre mí:",
-      nacimiento: "Nacimiento:",
-      ubicacion: "Ubicación:",
-      educacion: "Educación:",
-      haciendo: "Lo que ando haciendo:",
-      hobbies: "Hobbies:",
-      marketing: "Marketing y Ventas:",
-      metaads: "Meta Ads:",
-      streaming: "Edición y Streaming:"
-    },
-    en: {
-      principal: "Hello world! I'm Lorenzo",
-      sub: "This is my first project saved on GitHub.",
-      datos: "👤 About me:",
-      nacimiento: "Birth:",
-      ubicacion: "Location:",
-      educacion: "Education:",
-      haciendo: "What I'm doing:",
-      hobbies: "Hobbies:",
-      marketing: "Marketing & Sales:",
-      metaads: "Meta Ads:",
-      streaming: "Editing & Streaming:"
-    },
-    jp: {
-      principal: "ハローワールド！ロレンソです",
-      sub: "これはGitHubに保存した私の最初のプロジェクトです。",
-      datos: "👤 自己紹介:",
-      nacimiento: "生年月日:",
-      ubicacion: "場所:",
-      educacion: "学歴:",
-      haciendo: "現在の活動:",
-      hobbies: "趣味:",
-      marketing: "マーケティングと販売:",
-      metaads: "メタ広告:",
-      streaming: "編集と配信:"
-    },
-    pt: {
-      principal: "Olá mundo! Sou o Lorenzo",
-      sub: "Este é meu primeiro projeto salvo no GitHub.",
-      datos: "👤 Sobre mim:",
-      nacimiento: "Nascimento:",
-      ubicacion: "Localização:",
-      educacion: "Educação:",
-      haciendo: "O que estou fazendo:",
-      hobbies: "Hobbies:",
-      marketing: "Marketing e Vendas:",
-      metaads: "Meta Ads:",
-      streaming: "Edição e Streaming:"
-    },
-    it: {
-      principal: "Ciao mondo! Sono Lorenzo",
-      sub: "Questo è il mio primo progetto salvato su GitHub.",
-      datos: "👤 Su di me:",
-      nacimiento: "Nascita:",
-      ubicacion: "Posizione:",
-      educacion: "Istruzione:",
-      haciendo: "Cosa sto facendo:",
-      hobbies: "Hobby:",
-      marketing: "Marketing e Vendite:",
-      metaads: "Meta Ads:",
-      streaming: "Editing e Streaming:"
-    },
-    fr: {
-      principal: "Bonjour le monde ! Je suis Lorenzo",
-      sub: "C'est mon premier projet enregistré sur GitHub.",
-      datos: "👤 À propos de moi :",
-      nacimiento: "Naissance :",
-      ubicacion: "Emplacement :",
-      educacion: "Éducation :",
-      haciendo: "Ce que je fais :",
-      hobbies: "Loisirs :",
-      marketing: "Marketing et Ventes :",
-      metaads: "Meta Ads :",
-      streaming: "Montage et Streaming :"
-    }
-  };
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Primera Página - Lorenzo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #121212; color: white; font-family: sans-serif; margin: 0; padding-bottom: 50px;">
 
-  if (textos[lang]) {
-    document.getElementById("texto-principal").innerText = textos[lang].principal;
-    document.getElementById("subtitulo").innerText = textos[lang].sub;
-    document.getElementById("titulo-datos").innerText = textos[lang].datos;
-    document.getElementById("txt-nacimiento").innerText = textos[lang].nacimiento;
-    document.getElementById("txt-ubicacion").innerText = textos[lang].ubicacion;
-    document.getElementById("txt-educacion").innerText = textos[lang].educacion;
-    document.getElementById("titulo-haciendo").innerText = textos[lang].haciendo;
-    document.getElementById("txt-hobbies").innerText = textos[lang].hobbies;
-    document.getElementById("txt-marketing").innerText = textos[lang].marketing;
-    document.getElementById("txt-metaads").innerText = textos[lang].metaads;
-    document.getElementById("txt-streaming").innerText = textos[lang].streaming;
-  }
-}
+  <audio id="musica-fondo" loop src="musica.mp3.mp4"></audio>
 
-function alternarModo() {
-  const body = document.body;
-  if (body.style.backgroundColor === "rgb(18, 18, 18)" || body.style.backgroundColor === "#121212" || body.style.backgroundColor === "") {
-    body.style.backgroundColor = "#f4f4f4";
-    body.style.color = "#121212";
-  } else {
-    body.style.backgroundColor = "#121212";
-    body.style.color = "white";
-  }
-}
+  <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; margin: 20px auto; width: 90%; max-width: 900px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; border: 2px dashed #25d366;">
+    
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+      <img src="download20260802151622.png" alt="Lobichua" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #25d366; object-fit: cover;">
+      <span id="txt-cartel" style="color: #25d366; font-weight: bold; font-size: 15px;">🐾 ¡Cambiá de idioma con el Lobichua, qué esperás!</span>
+    </div>
 
-function alternarMusica() {
-  const musica = document.getElementById("musica-fondo");
-  if (musica.paused) {
-    musica.play();
-  } else {
-    musica.pause();
-  }
-}
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <button onclick="cambiarIdioma('es')" style="background: #2e7d32; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #81c784; cursor: pointer;">🇦🇷 ES</button>
+      <button onclick="cambiarIdioma('en')" style="background: #1565c0; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #64b5f6; cursor: pointer;">🇬🇧 EN</button>
+      <button onclick="cambiarIdioma('jp')" style="background: #c62828; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #ef5350; cursor: pointer;">🇯🇵 JP</button>
+      <button onclick="cambiarIdioma('pt')" style="background: #fbc02d; color: #1a1a1a; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #fff176; cursor: pointer;">🇧🇷 PT</button>
+      <button onclick="cambiarIdioma('it')" style="background: #2e7d32; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #81c784; cursor: pointer;">🇮🇹 IT</button>
+      <button onclick="cambiarIdioma('fr')" style="background: #1565c0; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #64b5f6; cursor: pointer;">🇫🇷 FR</button>
+      <button onclick="alternarModo()" style="background: #424242; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #bdbdbd; cursor: pointer;">🌓 Modo</button>
+      <button onclick="alternarMusica()" style="background: #e91e63; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #ff80ab; cursor: pointer;">🎵 Música</button>
+    </div>
+  </div>
+
+  <div style="text-align: center; padding: 30px 20px;">
+    <h1 id="texto-principal" style="margin-bottom: 10px; font-size: 38px; color: #ffffff;">¡Hola mundo! Soy Lorenzo</h1>
+    <p id="subtitulo" style="margin-top: 0; font-size: 20px; color: #bbbbbb;">Emprendedor, creador y desarrollador web.</p>
+  </div>
+
+  <div style="margin-top: 10px; width: 90%; max-width: 900px; margin-left: auto; margin-right: auto; padding: 20px; background: rgba(255, 255, 255, 0.08); border-radius: 12px; border: 2px solid #ffeb3b;">
+    <h2 id="titulo-datos" style="font-size: 26px; color: #ffeb3b; margin-top: 0;">👤 Datos sobre mí:</h2>
+    <ul style="font-size: 18px; line-height: 1.8; margin-bottom: 0; padding-left: 20px;">
+      <li><strong id="txt-nacimiento-lbl">Nacimiento:</strong> <span id="txt-nacimiento-val">9 de diciembre de 1999.</span></li>
+      <li><strong id="txt-ubicacion-lbl">Ubicación:</strong> <span id="txt-ubicacion-val">Buenos Aires, Argentina 🇦🇷</span></li>
+      <li><strong id="txt-educacion-lbl">Educación:</strong> <span id="txt-educacion-val">E.E.S. N°3.</span></li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 30px; width: 90%; max-width: 900px; margin-left: auto; margin-right: auto; padding: 0 20px; font-size: 18px; line-height: 1.8;">
+    <h2 id="titulo-haciendo" style="font-size: 28px; color: #ffeb3b;">Lo que ando haciendo:</h2>
+    <ul style="padding-left: 20px;">
+      <li style="margin-bottom: 18px;">
+        <strong id="txt-hobbies-lbl">Hobbies:</strong> <span id="txt-hobbies-val">Mirar YouTube, Instagram, TikTok o chatear en Discord.</span>
+      </li>
+      <li style="margin-bottom: 18px;">
+        <strong id="txt-marketing-lbl">Marketing y Ventas:</strong> <span id="txt-marketing-val">Creación de páginas en redes sobre productos nutricionales, salud y cuidado de la piel, conectando enlaces directos a WhatsApp.</span>
+      </li>
+      <li style="margin-bottom: 18px;">
+        <strong id="txt-metaads-lbl">Meta Ads:</strong> <span id="txt-metaads-val">Uso del Administrador de Anuncios para llegar a personas de provincia y ofrecer envíos personalizados.</span>
+      </li>
+      <li style="margin-bottom: 18px;">
+        <strong id="txt-streaming-lbl">Edición y Streaming:</strong> <span id="txt-streaming-val">Grabación y edición con celular, directos y videos pro en PC usando OBS y herramientas de streaming.</span>
+      </li>
+    </ul>
+
+    <div style="display: flex; gap: 20px; margin-top: 35px; flex-wrap: wrap;">
+      
+      <div style="flex: 1; min-width: 280px; background: rgba(24, 119, 242, 0.15); padding: 20px; border-radius: 12px; border: 2px solid #1877f2;">
+        <h2 style="font-size: 22px; color: #ffeb3b; margin-top: 0;">🌐 Facebook:</h2>
+        <p style="margin-bottom: 0;">
+          <a id="link-fb" href="https://www.facebook.com/profile.php?id=61593598404615" target="_blank" style="color: #ffeb3b; text-decoration: underline; font-weight: bold;">Visita mi Facebook</a>
+        </p>
+      </div>
+
+      <div style="flex: 1; min-width: 280px; background: rgba(37, 211, 102, 0.15); padding: 20px; border-radius: 12px; border: 2px solid #25d366;">
+        <h2 style="font-size: 22px; color: #ffeb3b; margin-top: 0;">💬 WhatsApp:</h2>
+        <p style="margin-bottom: 0;">
+          +54 11 5099-7566 — 
+          <a id="link-wa" href="https://wa.link/2a4b6m" target="_blank" style="color: #25d366; text-decoration: underline; font-weight: bold;">Escríbeme al WhatsApp</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
