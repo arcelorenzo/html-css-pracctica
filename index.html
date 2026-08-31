@@ -7,6 +7,9 @@
 </head>
 <body style="background-color: #121212; color: white;">
 
+  <!-- Reproductor de música de fondo con el archivo de audio -->
+  <audio id="musica-fondo" autoplay loop src="musica.mp3.mp4"></audio>
+
   <!-- Botonera interactiva de JavaScript con los 6 idiomas + Botón de Modo Oscuro/Claro -->
   <div style="text-align: right; padding: 10px 20px; display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap;">
     <button onclick="cambiarIdioma('es')" style="background: #2e7d32; color: white; padding: 8px 15px; border-radius: 8px; font-weight: bold; border: 2px solid #81c784; cursor: pointer;">🇦🇷 Español</button>
@@ -28,9 +31,9 @@
   <div style="margin-top: 30px; width: 95%; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 12px; border: 2px solid #ffeb3b;">
     <h2 id="titulo-datos" style="font-size: 26px; color: #ffeb3b; margin-top: 0;">👤 Datos sobre mí:</h2>
     <ul style="font-size: 18px; line-height: 1.8; margin-bottom: 0;">
-      <li><strong id="txt-nacimiento">Nacimiento:</strong> 9 de diciembre de 2007 (18 años).</li>
+      <li><strong id="txt-nacimiento">Nacimiento:</strong> 9 de diciembre de 1999.</li>
       <li><strong id="txt-ubicacion">Ubicación:</strong> Buenos Aires, Argentina 🇦🇷</li>
-      <li><strong id="txt-educacion">Educación:</strong> Cursando 5to año en la E.E.S. N°3 "José Manuel Estrada" (Avellaneda).</li>
+      <li><strong id="txt-educacion">Educación:</strong> E.E.S. N°3.</li>
     </ul>
   </div>
 
@@ -38,7 +41,7 @@
     <h2 id="titulo-haciendo" style="font-size: 30px; color: #ffeb3b;">Lo que ando haciendo:</h2>
     <ul>
       <li style="margin-bottom: 22px;">
-        <strong id="txt-hobbies">Hobbies:</strong> Mirar <span style="color: #ff0000;">▶️ YouTube</span>, <span style="color: #e1306c;">📷 Instagram</span>, <span style="color: #9b45e5;">🎵 TikTok</span> o chatear en <span style="color: #7289da;">🎮 Discord</span>. ¡Y obvio, pasar tiempo con mi gordo de rayas de gatito 🐈!
+        <strong id="txt-hobbies">Hobbies:</strong> Mirar <span style="color: #ff0000;">▶️ YouTube</span>, <span style="color: #e1306c;">📷 Instagram</span>, <span style="color: #9b45e5;">🎵 TikTok</span> o chatear en <span style="color: #7289da;">🎮 Discord</span>.
       </li>
       <li style="margin-bottom: 22px;">
         <strong id="txt-marketing">Marketing y Ventas:</strong> Creación de páginas de <span style="color: #1877f2;">🌐 Facebook</span> sobre productos nutricionales, salud y cuidado de la piel, conectando <span style="color: #ffeb3b;">🔗 enlaces directos</span> a <span style="color: #25d366;">💬 WhatsApp</span>.
