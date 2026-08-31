@@ -1,99 +1,165 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Mi Primera Página - Lorenzo</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body style="background-color: #121212; color: white; font-family: sans-serif; margin: 0; padding-bottom: 50px;">
+function cambiarIdioma(lang) {
+  const textos = {
+    es: {
+      principal: "¡Hola mundo! Soy Lorenzo",
+      sub: "Emprendedor, creador y desarrollador web.",
+      datos: "👤 Datos sobre mí:",
+      nacimientoLbl: "Nacimiento:",
+      nacimientoVal: "9 de diciembre de 1999.",
+      ubicacionLbl: "Ubicación:",
+      ubicacionVal: "Buenos Aires, Argentina 🇦🇷",
+      educacionLbl: "Educación:",
+      educacionVal: "E.E.S. N°3.",
+      haciendo: "Lo que ando haciendo:",
+      hobbiesLbl: "Hobbies:",
+      hobbiesVal: "Mirar ▶️ YouTube, 📷 Instagram, 🎵 TikTok o chatear en 🎮 Discord.",
+      marketingLbl: "Marketing y Ventas:",
+      marketingVal: "Creación de páginas de 🌐 Facebook sobre productos nutricionales, salud y cuidado de la piel, conectando 🔗 enlaces directos a 💬 WhatsApp.",
+      metaadsLbl: "Meta Ads:",
+      metaadsVal: "Uso del Administrador de Anuncios (campañas) para llegar a personas de mi provincia y ofrecer envíos personalizados.",
+      streamingLbl: "Edición y Streaming:",
+      streamingVal: "Grabación y edición con 📱 XRecorder y CapCut en el 📱 celu, o directos y videos pro en la 💻 PC usando 🎥 OBS, 👾 Veadotube Mini, Scrcpy por 🔌 depuración USB y 💻 JavaScript para el avatar y la pantalla del celu."
+    },
+    en: {
+      principal: "Hello world! I'm Lorenzo",
+      sub: "Entrepreneur, creator, and web developer.",
+      datos: "👤 About me:",
+      nacimientoLbl: "Birth:",
+      nacimientoVal: "December 9, 1999.",
+      ubicacionLbl: "Location:",
+      ubicacionVal: "Buenos Aires, Argentina 🇦🇷",
+      educacionLbl: "Education:",
+      educacionVal: "E.E.S. N°3.",
+      haciendo: "What I'm doing:",
+      hobbiesLbl: "Hobbies:",
+      hobbiesVal: "Watching ▶️ YouTube, 📷 Instagram, 🎵 TikTok or chatting on 🎮 Discord.",
+      marketingLbl: "Marketing & Sales:",
+      marketingVal: "Creating 🌐 Facebook pages about nutritional products, health, and skincare, connecting 🔗 direct links to 💬 WhatsApp.",
+      metaadsLbl: "Meta Ads:",
+      metaadsVal: "Using Ads Manager (campaigns) to reach people in my province and offer personalized shipping.",
+      streamingLbl: "Editing & Streaming:",
+      streamingVal: "Recording and editing with 📱 XRecorder and CapCut on the 📱 phone, or live streams and pro videos on the 💻 PC using 🎥 OBS, 👾 Veadotube Mini, Scrcpy via 🔌 USB debugging, and 💻 JavaScript for the avatar and phone screen."
+    },
+    jp: {
+      principal: "ハローワールド！ロレンソです",
+      sub: "起業家、クリエイター、ウェブ開発者です。",
+      datos: "👤 自己紹介:",
+      nacimientoLbl: "生年月日:",
+      nacimientoVal: "1999年12月9日。",
+      ubicacionLbl: "場所:",
+      ubicacionVal: "アルゼンチン、ブエノスアイレス 🇦🇷",
+      educacionLbl: "学歴:",
+      educacionVal: "E.E.S. N°3。",
+      haciendo: "現在の活動:",
+      hobbiesLbl: "趣味:",
+      hobbiesVal: "▶️ YouTube、📷 Instagram、🎵 TikTokを見ること、または 🎮 Discordでチャットすること。",
+      marketingLbl: "マーケティングと販売:",
+      marketingVal: "栄養製品、健康、スキンケアに関する 🌐 Facebookページを作成し、💬 WhatsAppへの 🔗 直接リンクを接続します。",
+      metaadsLbl: "メタ広告:",
+      metaadsVal: "広告マネージャー（キャンペーン）を使用して、自分の州の人々にアプローチし、パーソナライズされた配送を提供します。",
+      streamingLbl: "編集と配信:",
+      streamingVal: "📱 スマホでの 📱 XRecorderやCapCutを使った録画・編集、または 💻 パソコンでの 🎥 OBS、👾 Veadotube Mini、🔌 USBデバッグによるScrcpy、アバターとスマホ画面用の 💻 JavaScriptを使ったプロ仕様のライブ配信と動画制作。"
+    },
+    pt: {
+      principal: "Olá mundo! Sou o Lorenzo",
+      sub: "Empreendedor, criador e desenvolvedor web.",
+      datos: "👤 Sobre mim:",
+      nacimientoLbl: "Nascimento:",
+      nacimientoVal: "9 de dezembro de 1999.",
+      ubicacionLbl: "Localização:",
+      ubicacionVal: "Buenos Aires, Argentina 🇦🇷",
+      educacionLbl: "Educação:",
+      educacionVal: "E.E.S. N°3.",
+      haciendo: "O que estou fazendo:",
+      hobbiesLbl: "Hobbies:",
+      hobbiesVal: "Assistir ▶️ YouTube, 📷 Instagram, 🎵 TikTok ou conversar no 🎮 Discord.",
+      marketingLbl: "Marketing e Vendas:",
+      marketingVal: "Criação de páginas do 🌐 Facebook sobre produtos nutricionais, saúde e cuidados com a pele, conectando 🔗 links diretos para o 💬 WhatsApp.",
+      metaadsLbl: "Meta Ads:",
+      metaadsVal: "Uso do Gerenciador de Anúncios (campanhas) para alcançar pessoas da minha província e oferecer entregas personalizadas.",
+      streamingLbl: "Edição e Streaming:",
+      streamingVal: "Gravação e edição com 📱 XRecorder e CapCut no 📱 celular, ou lives e vídeos profissionais no 💻 PC usando 🎥 OBS, 👾 Veadotube Mini, Scrcpy via 🔌 depuração USB e 💻 JavaScript para o avatar e a tela do celular."
+    },
+    it: {
+      principal: "Ciao mondo! Sono Lorenzo",
+      sub: "Imprenditore, creatore e sviluppatore web.",
+      datos: "👤 Su di me:",
+      nacimientoLbl: "Nascita:",
+      nacimientoVal: "9 dicembre 1999.",
+      ubicacionLbl: "Posizione:",
+      ubicacionVal: "Buenos Aires, Argentina 🇦🇷",
+      educacionLbl: "Istruzione:",
+      educacionVal: "E.E.S. N°3.",
+      haciendo: "Cosa sto facendo:",
+      hobbiesLbl: "Hobby:",
+      hobbiesVal: "Guardare ▶️ YouTube, 📷 Instagram, 🎵 TikTok o chattare su 🎮 Discord.",
+      marketingLbl: "Marketing e Vendite:",
+      marketingVal: "Creazione di pagine 🌐 Facebook su prodotti nutrizionali, salute e cura della pelle, collegando 🔗 link diretti a 💬 WhatsApp.",
+      metaadsLbl: "Meta Ads:",
+      metaadsVal: "Utilizzo di Gestione inserzioni (campagne) per raggiungere persone nella mia provincia e offrire spedizioni personalizzate.",
+      streamingLbl: "Editing e Streaming:",
+      streamingVal: "Registrazione ed editing con 📱 XRecorder e CapCut sul 📱 cellulare, o live e video pro sul 💻 PC usando 🎥 OBS, 👾 Veadotube Mini, Scrcpy tramite 🔌 debug USB e 💻 JavaScript per l'avatar e lo schermo del telefono."
+    },
+    fr: {
+      principal: "Bonjour le monde ! Je suis Lorenzo",
+      sub: "Entrepreneur, créateur et développeur web.",
+      datos: "👤 À propos de moi :",
+      nacimientoLbl: "Naissance :",
+      nacimientoVal: "9 décembre 1999.",
+      ubicacionLbl: "Emplacement :",
+      ubicacionVal: "Buenos Aires, Argentine 🇦🇷",
+      educacionLbl: "Éducation :",
+      educacionVal: "E.E.S. N°3.",
+      haciendo: "Ce que je fais :",
+      hobbiesLbl: "Loisirs :",
+      hobbiesVal: "Regarder ▶️ YouTube, 📷 Instagram, 🎵 TikTok ou discuter sur 🎮 Discord.",
+      marketingLbl: "Marketing et Ventes :",
+      marketingVal: "Création de pages 🌐 Facebook sur les produits nutritionnels, la santé et les soins de la peau, en connectant 🔗 des liens directs vers 💬 WhatsApp.",
+      metaadsLbl: "Meta Ads :",
+      metaadsVal: "Utilisation du Gestionnaire de publicités (campagnes) pour atteindre des personnes de ma province et proposer des envois personnalisés.",
+      streamingLbl: "Montage et Streaming :",
+      streamingVal: "Enregistrement et montage avec 📱 XRecorder et CapCut sur le 📱 téléphone, ou des lives et vidéos pro sur le 💻 PC en utilisant 🎥 OBS, 👾 Veadotube Mini, Scrcpy via 🔌 débogage USB et 💻 JavaScript pour l'avatar et l'écran du téléphone."
+    }
+  };
 
-  <!-- Reproductor de música de fondo -->
-  <audio id="musica-fondo" loop src="musica.mp3.mp4"></audio>
+  if (textos[lang]) {
+    document.getElementById("texto-principal").innerText = textos[lang].principal;
+    document.getElementById("subtitulo").innerText = textos[lang].sub;
+    document.getElementById("titulo-datos").innerText = textos[lang].datos;
+    document.getElementById("txt-nacimiento-lbl").innerText = textos[lang].nacimientoLbl;
+    document.getElementById("txt-nacimiento-val").innerText = textos[lang].nacimientoVal;
+    document.getElementById("txt-ubicacion-lbl").innerText = textos[lang].ubicacionLbl;
+    document.getElementById("txt-ubicacion-val").innerText = textos[lang].ubicacionVal;
+    document.getElementById("txt-educacion-lbl").innerText = textos[lang].educacionLbl;
+    document.getElementById("txt-educacion-val").innerText = textos[lang].educacionVal;
+    document.getElementById("titulo-haciendo").innerText = textos[lang].haciendo;
+    document.getElementById("txt-hobbies-lbl").innerText = textos[lang].hobbiesLbl;
+    document.getElementById("txt-hobbies-val").innerText = textos[lang].hobbiesVal;
+    document.getElementById("txt-marketing-lbl").innerText = textos[lang].marketingLbl;
+    document.getElementById("txt-marketing-val").innerText = textos[lang].marketingVal;
+    document.getElementById("txt-metaads-lbl").innerText = textos[lang].metaadsLbl;
+    document.getElementById("txt-metaads-val").innerText = textos[lang].metaadsVal;
+    document.getElementById("txt-streaming-lbl").innerText = textos[lang].streamingLbl;
+    document.getElementById("txt-streaming-val").innerText = textos[lang].streamingVal;
+  }
+}
 
-  <!-- Botonera de Idiomas y el Lobichua con patitas -->
-  <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; margin: 20px auto; width: 90%; max-width: 900px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; border: 2px dashed #25d366;">
-    
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
-      <img src="download20260802151622.png" alt="Lobichua" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #25d366; object-fit: cover;">
-      <span id="txt-cartel" style="color: #25d366; font-weight: bold; font-size: 15px;">🐾 ¡Cambiá de idioma con el Lobichua, qué esperás!</span>
-    </div>
+function alternarModo() {
+  const body = document.body;
+  if (body.style.backgroundColor === "rgb(18, 18, 18)" || body.style.backgroundColor === "#121212" || body.style.backgroundColor === "") {
+    body.style.backgroundColor = "#f4f4f4";
+    body.style.color = "#121212";
+  } else {
+    body.style.backgroundColor = "#121212";
+    body.style.color = "white";
+  }
+}
 
-    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-      <button onclick="cambiarIdioma('es')" style="background: #2e7d32; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #81c784; cursor: pointer;">🇦🇷 ES</button>
-      <button onclick="cambiarIdioma('en')" style="background: #1565c0; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #64b5f6; cursor: pointer;">🇬🇧 EN</button>
-      <button onclick="cambiarIdioma('jp')" style="background: #c62828; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #ef5350; cursor: pointer;">🇯🇵 JP</button>
-      <button onclick="cambiarIdioma('pt')" style="background: #fbc02d; color: #1a1a1a; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #fff176; cursor: pointer;">🇧🇷 PT</button>
-      <button onclick="cambiarIdioma('it')" style="background: #2e7d32; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #81c784; cursor: pointer;">🇮🇹 IT</button>
-      <button onclick="cambiarIdioma('fr')" style="background: #1565c0; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #64b5f6; cursor: pointer;">🇫🇷 FR</button>
-      <button onclick="alternarModo()" style="background: #424242; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #bdbdbd; cursor: pointer;">🌓 Modo</button>
-      <button onclick="alternarMusica()" style="background: #e91e63; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #ff80ab; cursor: pointer;">🎵 Música</button>
-    </div>
-  </div>
-
-  <!-- SECCIÓN PRINCIPAL: Lobichua Streamer y Títulos -->
-  <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; padding: 20px; gap: 30px;">
-    
-    <div style="text-align: center;">
-      <img src="download20260802151622.png" alt="El Lobichua OBS" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #25d366; object-fit: cover; box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);">
-      <p style="margin-top: 8px; font-size: 14px; color: #25d366; font-weight: bold;">🐾 El Lobichua (OBS)</p>
-    </div>
-
-    <div style="text-align: center; max-width: 500px;">
-      <h1 id="texto-principal" style="margin-bottom: 5px; font-size: 38px;">¡Hola mundo! Soy Lorenzo</h1>
-      <p id="subtitulo" style="margin-top: 0; font-size: 20px; color: #bbbbbb;">Emprendedor, creador y desarrollador web.</p>
-    </div>
-
-  </div>
-
-  <!-- ABOUT ME SECTION -->
-  <div style="margin-top: 10px; width: 90%; max-width: 900px; margin-left: auto; margin-right: auto; padding: 20px; background: rgba(255, 255, 255, 0.08); border-radius: 12px; border: 2px solid #ffeb3b;">
-    <h2 id="titulo-datos" style="font-size: 26px; color: #ffeb3b; margin-top: 0;">👤 Datos sobre mí:</h2>
-    <ul style="font-size: 18px; line-height: 1.8; margin-bottom: 0; padding-left: 20px;">
-      <li><strong id="txt-nacimiento">Nacimiento:</strong> 9 de diciembre de 1999.</li>
-      <li><strong id="txt-ubicacion">Ubicación:</strong> Buenos Aires, Argentina 🇦🇷</li>
-      <li><strong id="txt-educacion">Educación:</strong> E.E.S. N°3.</li>
-    </ul>
-  </div>
-
-  <!-- LO QUE ANDO HACIENDO -->
-  <div style="margin-top: 30px; width: 90%; max-width: 900px; margin-left: auto; margin-right: auto; padding: 0 20px; font-size: 18px; line-height: 1.8;">
-    <h2 id="titulo-haciendo" style="font-size: 28px; color: #ffeb3b;">Lo que ando haciendo:</h2>
-    <ul style="padding-left: 20px;">
-      <li style="margin-bottom: 18px;">
-        <strong id="txt-hobbies">Hobbies:</strong> Mirar <span style="color: #ff0000;">▶️ YouTube</span>, <span style="color: #e1306c;">📷 Instagram</span>, <span style="color: #9b45e5;">🎵 TikTok</span> o chatear en <span style="color: #7289da;">🎮 Discord</span>.
-      </li>
-      <li style="margin-bottom: 18px;">
-        <strong id="txt-marketing">Marketing y Ventas:</strong> Creación de páginas de <span style="color: #1877f2;">🌐 Facebook</span> sobre productos nutricionales, salud y cuidado de la piel, conectando <span style="color: #ffeb3b;">🔗 enlaces directos</span> a <span style="color: #25d366;">💬 WhatsApp</span>.
-      </li>
-      <li style="margin-bottom: 18px;">
-        <strong id="txt-metaads">Meta Ads:</strong> Uso del Administrador de Anuncios (campañas) para llegar a personas de mi provincia y ofrecer envíos personalizados.
-      </li>
-      <li style="margin-bottom: 18px;">
-        <strong id="txt-streaming">Edición y Streaming:</strong> Grabación y edición con <span style="color: #ff9800;">📱 XRecorder</span> y CapCut en el <span style="color: #c0c0c0;">📱 celu</span>, o directos y videos pro en la <span style="color: #c0c0c0;">💻 PC</span> usando <span style="color: #25d366;">🎥 OBS</span>, <span style="color: #8b4513;">👾 Veadotube Mini</span>, Scrcpy por <span style="color: #25d366;">🔌 depuración USB</span> y <span style="color: #25d366;">💻 JavaScript</span> para el avatar y la pantalla del celu.
-      </li>
-    </ul>
-
-    <!-- Redes (Facebook y WhatsApp) -->
-    <div style="display: flex; gap: 20px; margin-top: 35px; flex-wrap: wrap;">
-      
-      <div style="flex: 1; min-width: 280px; background: rgba(24, 119, 242, 0.15); padding: 20px; border-radius: 12px; border: 2px solid #1877f2;">
-        <h2 style="font-size: 22px; color: #ffeb3b; margin-top: 0;">🌐 Facebook:</h2>
-        <p style="margin-bottom: 0;">
-          <a href="https://www.facebook.com/profile.php?id=61593598404615" target="_blank" style="color: #ffeb3b; text-decoration: underline; font-weight: bold;">Visita mi Facebook</a>
-        </p>
-      </div>
-
-      <div style="flex: 1; min-width: 280px; background: rgba(37, 211, 102, 0.15); padding: 20px; border-radius: 12px; border: 2px solid #25d366;">
-        <h2 style="font-size: 22px; color: #ffeb3b; margin-top: 0;">💬 WhatsApp:</h2>
-        <p style="margin-bottom: 0;">
-          +54 11 5099-7566 — 
-          <a href="https://wa.link/2a4b6m" target="_blank" style="color: #25d366; text-decoration: underline; font-weight: bold;">Escríbeme al WhatsApp</a>
-        </p>
-      </div>
-
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+function alternarMusica() {
+  const musica = document.getElementById("musica-fondo");
+  if (musica.paused) {
+    musica.play();
+  } else {
+    musica.pause();
+  }
+}
