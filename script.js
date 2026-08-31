@@ -1,7 +1,7 @@
 const traducciones = {
     es: {
         saludo: "¡Hola mundo! Soy Lorenzo",
-        subtitulo: "Este es my primer proyecto guardado en GitHub.",
+        subtitulo: "Este es mi primer proyecto guardado en GitHub.",
         tituloDatos: "👤 Datos sobre mí:",
         nacimiento: "Nacimiento:",
         ubicacion: "Ubicación:",
@@ -49,7 +49,7 @@ const traducciones = {
         hobbies: "Hobbies: Assistir YouTube, Instagram, TikTok ou bater papo no Discord. E claro, passar tempo com meu gatinho listrado 🐈!",
         marketing: "Marketing e Vendas: Criação de páginas no Facebook sobre produtos nutricionais, saúde e cuidados com a pele, conectando links diretos para o WhatsApp.",
         metaAds: "Meta Ads: Uso do Gerenciador de Anúncios (campanhas) para alcançar pessoas da minha província e oferecer envios personalizados.",
-        streaming: "Edição e Streaming: Gravação e edição com XRecorder e CapCut no celular, ou lives e vídeos profissionais no PC usando OBS, Veadotube Mini e Scrcpy por depuração USB."
+        streaming: "Edição e Streaming: Gravação e edição com XRecorder e CapCut no celular, ou lives e vídeos profissionais no PC usando OBS, Veadotube Mini e Scrcpy por depuración USB."
     },
     it: {
         saludo: "Ciao mondo! Sono Lorenzo",
@@ -93,4 +93,16 @@ function cambiarIdioma(idioma) {
     document.getElementById("txt-marketing").innerText = t.marketing;
     document.getElementById("txt-metaads").innerText = t.metaAds;
     document.getElementById("txt-streaming").innerText = t.streaming;
+}
+
+// Función para alternar entre modo oscuro y modo claro
+function alternarModo() {
+    const cuerpo = document.body;
+    if (cuerpo.style.backgroundColor === "white") {
+        cuerpo.style.backgroundColor = "#121212";
+        cuerpo.style.color = "white";
+    } else {
+        cuerpo.style.backgroundColor = "white";
+        cuerpo.style.color = "#121212";
+    }
 }
