@@ -60,7 +60,7 @@ const traducciones = {
         tituloHaciendo: "O que estou fazendo:",
         hobbies: "Hobbies: Assistir YouTube, Instagram, TikTok ou bater papo no Discord. E claro, passar tempo com meu gatinho listrado 🐈!",
         marketing: "Marketing e Vendas: Criação de páginas no Facebook sobre produtos nutricionais, saúde e cuidados com a pele, conectando links diretos para o WhatsApp.",
-        metaAds: "Meta Ads: Uso do Gerenciador de Anúncios (campanhas) para alcançar pessoas da minha província e oferecer envios personalizados.",
+        metaAds: "Meta Ads: Uso do Gerenciador de Anúncios (campanhas) para alcançar pessoas da minha província e oferecer envíos personalizados.",
         streaming: "Edição e Streaming: Gravação e edição com XRecorder e CapCut no celular, ou lives e vídeos profissionais no PC usando OBS, Veadotube Mini e Scrcpy por depuración USB."
     },
     it: {
