@@ -7,10 +7,10 @@
 </head>
 <body style="background-color: #121212; color: white;">
 
-  <!-- Reproductor de música de fondo con el archivo de audio -->
-  <audio id="musica-fondo" autoplay loop src="musica.mp3.mp4"></audio>
+  <!-- Reproductor de música de fondo -->
+  <audio id="musica-fondo" loop src="musica.mp3.mp4"></audio>
 
-  <!-- Botonera interactiva de JavaScript con los 6 idiomas + Botón de Modo Oscuro/Claro -->
+  <!-- Botonera interactiva de JavaScript con los 6 idiomas + Modo + Botón de Música -->
   <div style="text-align: right; padding: 10px 20px; display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap;">
     <button onclick="cambiarIdioma('es')" style="background: #2e7d32; color: white; padding: 8px 15px; border-radius: 8px; font-weight: bold; border: 2px solid #81c784; cursor: pointer;">🇦🇷 Español</button>
     <button onclick="cambiarIdioma('en')" style="background: #1565c0; color: white; padding: 8px 15px; border-radius: 8px; font-weight: bold; border: 2px solid #64b5f6; cursor: pointer;">🇬🇧 English</button>
@@ -21,6 +21,9 @@
     
     <!-- Botón para alternar el modo oscuro/claro -->
     <button onclick="alternarModo()" style="background: #424242; color: white; padding: 8px 15px; border-radius: 8px; font-weight: bold; border: 2px solid #bdbdbd; cursor: pointer;">🌓 Modo</button>
+
+    <!-- Botón para prender/apagar la música -->
+    <button onclick="alternarMusica()" style="background: #e91e63; color: white; padding: 8px 15px; border-radius: 8px; font-weight: bold; border: 2px solid #ff80ab; cursor: pointer;">🎵 Música</button>
   </div>
 
   <!-- Título principal y subtítulo con ID -->
