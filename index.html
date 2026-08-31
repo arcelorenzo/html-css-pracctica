@@ -7,43 +7,44 @@
 </head>
 <body style="color: white;">
 
-  <!-- Botonera multilingüe de 6 opciones -->
+  <!-- Botonera interactiva de JavaScript con los 6 idiomas -->
   <div style="text-align: right; padding: 10px 20px; display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap;">
-    <a href="index.html" style="background: #2e7d32; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid #81c784;">🇦🇷 Español</a>
-    <a href="en.html" style="background: #1565c0; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid #64b5f6;">🇬🇧 English</a>
-    <a href="jp.html" style="background: #c62828; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid #ef5350;">🇯🇵 日本語</a>
-    <a href="pt.html" style="background: #fbc02d; color: #1a1a1a; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid #fff176;">🇧🇷 Português</a>
-    <a href="it.html" style="background: #2e7d32; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid #81c784;">🇮🇹 Italiano</a>
-    <a href="fr.html" style="background: #1565c0; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid #64b5f6;">🇫🇷 Français</a>
+    <button onclick="cambiarIdioma('es')" style="background: #2e7d32; color: white; padding: 8px 15px; border-radius: 8px; font-weight: bold; border: 2px solid #81c784; cursor: pointer;">🇦🇷 Español</button>
+    <button onclick="cambiarIdioma('en')" style="background: #1565c0; color: white; padding: 8px 15px; border-radius: 8px; font-weight: bold; border: 2px solid #64b5f6; cursor: pointer;">🇬🇧 English</button>
+    <button onclick="cambiarIdioma('jp')" style="background: #c62828; color: white; padding: 8px 15px; border-radius: 8px; font-weight: bold; border: 2px solid #ef5350; cursor: pointer;">🇯🇵 日本語</button>
+    <button onclick="cambiarIdioma('pt')" style="background: #fbc02d; color: #1a1a1a; padding: 8px 15px; border-radius: 8px; font-weight: bold; border: 2px solid #fff176; cursor: pointer;">🇧🇷 Português</button>
+    <button onclick="cambiarIdioma('it')" style="background: #2e7d32; color: white; padding: 8px 15px; border-radius: 8px; font-weight: bold; border: 2px solid #81c784; cursor: pointer;">🇮🇹 Italiano</button>
+    <button onclick="cambiarIdioma('fr')" style="background: #1565c0; color: white; padding: 8px 15px; border-radius: 8px; font-weight: bold; border: 2px solid #64b5f6; cursor: pointer;">🇫🇷 Français</button>
   </div>
 
-  <h1>¡Hola mundo! Soy Lorenzo</h1>
-  <p>Este es mi primer proyecto guardado en GitHub.</p>
+  <!-- Título principal y subtítulo con ID -->
+  <h1 id="texto-principal">¡Hola mundo! Soy Lorenzo</h1>
+  <p id="subtitulo">Este es mi primer proyecto guardado en GitHub.</p>
 
   <!-- ABOUT ME SECTION -->
   <div style="margin-top: 30px; width: 95%; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 12px; border: 2px solid #ffeb3b;">
-    <h2 style="font-size: 26px; color: #ffeb3b; margin-top: 0;">👤 Datos sobre mí:</h2>
+    <h2 id="titulo-datos" style="font-size: 26px; color: #ffeb3b; margin-top: 0;">👤 Datos sobre mí:</h2>
     <ul style="font-size: 18px; line-height: 1.8; margin-bottom: 0;">
-      <li><strong>Nacimiento:</strong> 9 de diciembre de 2007 (18 años).</li>
-      <li><strong>Ubicación:</strong> Buenos Aires, Argentina 🇦🇷</li>
-      <li><strong>Educación:</strong> Cursando 5to año en la E.E.S. N°3 "José Manuel Estrada" (Avellaneda).</li>
+      <li><strong id="txt-nacimiento">Nacimiento:</strong> 9 de diciembre de 2007 (18 años).</li>
+      <li><strong id="txt-ubicacion">Ubicación:</strong> Buenos Aires, Argentina 🇦🇷</li>
+      <li><strong id="txt-educacion">Educación:</strong> Cursando 5to año en la E.E.S. N°3 "José Manuel Estrada" (Avellaneda).</li>
     </ul>
   </div>
 
   <div style="margin-top: 40px; width: 95%; padding: 0 20px; font-size: 20px; line-height: 1.8;">
-    <h2 style="font-size: 30px; color: #ffeb3b;">Lo que ando haciendo:</h2>
+    <h2 id="titulo-haciendo" style="font-size: 30px; color: #ffeb3b;">Lo que ando haciendo:</h2>
     <ul>
       <li style="margin-bottom: 22px;">
-        <strong>Hobbies:</strong> Mirar <span style="color: #ff0000;">▶️ YouTube</span>, <span style="color: #e1306c;">📷 Instagram</span>, <span style="color: #9b45e5;">🎵 TikTok</span> o chatear en <span style="color: #7289da;">🎮 Discord</span>. ¡Y obvio, pasar tiempo con mi gordo de rayas de gatito 🐈!
+        <strong id="txt-hobbies">Hobbies:</strong> Mirar <span style="color: #ff0000;">▶️ YouTube</span>, <span style="color: #e1306c;">📷 Instagram</span>, <span style="color: #9b45e5;">🎵 TikTok</span> o chatear en <span style="color: #7289da;">🎮 Discord</span>. ¡Y obvio, pasar tiempo con mi gordo de rayas de gatito 🐈!
       </li>
       <li style="margin-bottom: 22px;">
-        <strong>Marketing y Ventas:</strong> Creación de páginas de <span style="color: #1877f2;">🌐 Facebook</span> sobre productos nutricionales, salud y cuidado de la piel, conectando <span style="color: #ffeb3b;">🔗 enlaces directos</span> a <span style="color: #25d366;">💬 WhatsApp</span>.
+        <strong id="txt-marketing">Marketing y Ventas:</strong> Creación de páginas de <span style="color: #1877f2;">🌐 Facebook</span> sobre productos nutricionales, salud y cuidado de la piel, conectando <span style="color: #ffeb3b;">🔗 enlaces directos</span> a <span style="color: #25d366;">💬 WhatsApp</span>.
       </li>
       <li style="margin-bottom: 22px;">
-        <strong>Meta Ads:</strong> Uso del Administrador de Anuncios (campañas) para llegar a personas de mi provincia y ofrecer envíos personalizados.
+        <strong id="txt-metaads">Meta Ads:</strong> Uso del Administrador de Anuncios (campañas) para llegar a personas de mi provincia y ofrecer envíos personalizados.
       </li>
       <li style="margin-bottom: 22px;">
-        <strong>Edición y Streaming:</strong> Grabación y edición con <span style="color: #ff9800;">📱 XRecorder</span> y CapCut en el <span style="color: #c0c0c0;">📱 celu</span>, o directos y videos pro en la <span style="color: #c0c0c0;">💻 PC</span> usando <span style="color: #000000;">🎥 OBS</span>, <span style="color: #8b4513;">👾 Veadotube Mini</span> y Scrcpy por <span style="color: #000000;">🔌 depuración USB</span> para el avatar y la pantalla del celu.
+        <strong id="txt-streaming">Edición y Streaming:</strong> Grabación y edición con <span style="color: #ff9800;">📱 XRecorder</span> y CapCut en el <span style="color: #c0c0c0;">📱 celu</span>, o directos y videos pro en la <span style="color: #c0c0c0;">💻 PC</span> usando <span style="color: #000000;">🎥 OBS</span>, <span style="color: #8b4513;">👾 Veadotube Mini</span> y Scrcpy por <span style="color: #000000;">🔌 depuración USB</span> para el avatar y la pantalla del celu.
       </li>
     </ul>
 
@@ -69,5 +70,8 @@
 
     </div>
   </div>
+
+  <!-- Conexión con el archivo script.js -->
+  <script src="script.js"></script>
 </body>
 </html>
