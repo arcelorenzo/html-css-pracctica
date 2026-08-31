@@ -1,34 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Mi Primera Página</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="color: white;">
 
-    <div class="language-buttons">
-        <a href="index.html" class="btn es">AR Español</a>
-        <a href="en.html" class="btn en">GB English</a>
-        <a href="jp.html" class="btn jp">JP 日本語</a>
-        <a href="pt.html" class="btn pt">BR Português</a>
-        <a href="it.html" class="btn it">IT Italiano</a>
-        <a href="fr.html" class="btn fr">FR Français</a>
-    </div>
+  <!-- Botonera multilingüe de 6 opciones -->
+  <div style="text-align: right; padding: 10px 20px; display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap;">
+    <a href="index.html" style="background: #2e7d32; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid #81c784;">🇦🇷 Español</a>
+    <a href="en.html" style="background: #1565c0; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid #64b5f6;">🇬🇧 English</a>
+    <a href="jp.html" style="background: #c62828; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid #ef5350;">🇯🇵 日本語</a>
+    <a href="pt.html" style="background: #fbc02d; color: #1a1a1a; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid #fff176;">🇧🇷 Português</a>
+    <a href="it.html" style="background: #2e7d32; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid #81c784;">🇮🇹 Italiano</a>
+    <a href="fr.html" style="background: #1565c0; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid #64b5f6;">🇫🇷 Français</a>
+  </div>
 
-    <h1>¡Hola Mundo! Soy Lorenzo</h1>
-    <p>Este es mi primer proyecto guardado en GitHub.</p>
+  <h1>¡Hola mundo! Soy Lorenzo</h1>
+  <p>Este es mi primer proyecto guardado en GitHub.</p>
 
-    <h2>Sobre mí:</h2>
+  <!-- ABOUT ME SECTION -->
+  <div style="margin-top: 30px; width: 95%; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 12px; border: 2px solid #ffeb3b;">
+    <h2 style="font-size: 26px; color: #ffeb3b; margin-top: 0;">👤 Datos sobre mí:</h2>
+    <ul style="font-size: 18px; line-height: 1.8; margin-bottom: 0;">
+      <li><strong>Nacimiento:</strong> 9 de diciembre de 2007 (18 años).</li>
+      <li><strong>Ubicación:</strong> Buenos Aires, Argentina 🇦🇷</li>
+      <li><strong>Educación:</strong> Cursando 5to año en la E.E.S. N°3 "José Manuel Estrada" (Avellaneda).</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 40px; width: 95%; padding: 0 20px; font-size: 20px; line-height: 1.8;">
+    <h2 style="font-size: 30px; color: #ffeb3b;">Lo que ando haciendo:</h2>
     <ul>
-        <li><strong>Fecha de nacimiento:</strong> 9 de diciembre de 2007 (18 años).</li>
-        <li><strong>Ubicación:</strong> Buenos Aires, Argentina 🇦🇷</li>
-        <li><strong>Educación:</strong> Actualmente en 5to año en la E.E.S. N°3 "José Manuel Estrada" (Avellaneda).</li>
+      <li style="margin-bottom: 22px;">
+        <strong>Hobbies:</strong> Mirar <span style="color: #ff0000;">▶️ YouTube</span>, <span style="color: #e1306c;">📷 Instagram</span>, <span style="color: #9b45e5;">🎵 TikTok</span> o chatear en <span style="color: #7289da;">🎮 Discord</span>. ¡Y obvio, pasar tiempo con mi gordo de rayas de gatito 🐈!
+      </li>
+      <li style="margin-bottom: 22px;">
+        <strong>Marketing y Ventas:</strong> Creación de páginas de <span style="color: #1877f2;">🌐 Facebook</span> sobre productos nutricionales, salud y cuidado de la piel, conectando <span style="color: #ffeb3b;">🔗 enlaces directos</span> a <span style="color: #25d366;">💬 WhatsApp</span>.
+      </li>
+      <li style="margin-bottom: 22px;">
+        <strong>Meta Ads:</strong> Uso del Administrador de Anuncios (campañas) para llegar a personas de mi provincia y ofrecer envíos personalizados.
+      </li>
+      <li style="margin-bottom: 22px;">
+        <strong>Edición y Streaming:</strong> Grabación y edición con <span style="color: #ff9800;">📱 XRecorder</span> y CapCut en el <span style="color: #c0c0c0;">📱 celu</span>, o directos y videos pro en la <span style="color: #c0c0c0;">💻 PC</span> usando <span style="color: #000000;">🎥 OBS</span>, <span style="color: #8b4513;">👾 Veadotube Mini</span> y Scrcpy por <span style="color: #000000;">🔌 depuración USB</span> para el avatar y la pantalla del celu.
+      </li>
     </ul>
 
-    <h2>Qué estoy haciendo:</h2>
-    <p>Ver videos en YouTube, pasar el rato en Instagram o TikTok, charlar en Discord y, por supuesto, pasar tiempo con mi gato tabby.</p>
+    <!-- Containers for Facebook and WhatsApp -->
+    <div style="display: flex; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
+      
+      <!-- Facebook Box -->
+      <div style="flex: 1; min-width: 280px; background: rgba(24, 119, 242, 0.15); padding: 20px; border-radius: 12px; border: 2px solid #1877f2;">
+        <h2 style="font-size: 24px; color: #ffeb3b; margin-top: 0;">🌐 Facebook:</h2>
+        <p style="margin-bottom: 0;">
+          <a href="https://www.facebook.com/profile.php?id=61593598404615" target="_blank" style="color: #ffeb3b; text-decoration: underline; font-weight: bold;">Visita mi Facebook</a>
+        </p>
+      </div>
 
+      <!-- WhatsApp Box -->
+      <div style="flex: 1; min-width: 280px; background: rgba(37, 211, 102, 0.15); padding: 20px; border-radius: 12px; border: 2px solid #25d366;">
+        <h2 style="font-size: 24px; color: #ffeb3b; margin-top: 0;">💬 WhatsApp:</h2>
+        <p style="margin-bottom: 0;">
+          +54 11 5099-7566 — 
+          <a href="https://wa.link/2a4b6m" target="_blank" style="color: #25d366; text-decoration: underline; font-weight: bold;">Escríbeme al WhatsApp</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>
