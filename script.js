@@ -1,3 +1,15 @@
+// Función para reproducir o pausar la música
+function alternarMusica() {
+    const musica = document.getElementById("musica-fondo");
+    
+    if (musica.paused) {
+        musica.play();
+    } else {
+        musica.pause();
+    }
+}
+
+// Diccionario con las traducciones para los 6 idiomas
 const traducciones = {
     es: {
         saludo: "¡Hola mundo! Soy Lorenzo",
@@ -53,7 +65,7 @@ const traducciones = {
     },
     it: {
         saludo: "Ciao mondo! Sono Lorenzo",
-        subtitulo: "Questo è il mio primo progetto salvato su GitHub.",
+        subtitulo: "Questo è il primo progetto salvato su GitHub.",
         tituloDatos: "👤 Chi sono:",
         nacimiento: "Data di nascita:",
         ubicacion: "Posizione:",
@@ -79,6 +91,7 @@ const traducciones = {
     }
 };
 
+// Función para cambiar los textos según el idioma seleccionado
 function cambiarIdioma(idioma) {
     const t = traducciones[idioma];
     
