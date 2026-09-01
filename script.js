@@ -123,6 +123,9 @@ function cambiarIdioma(lang) {
   };
 
   if (textos[lang]) {
+    // Guardamos la preferencia de idioma en el navegador
+    localStorage.setItem('idiomaPreferido', lang);
+
     document.getElementById("texto-principal").innerText = textos[lang].principal;
     document.getElementById("subtitulo").innerText = textos[lang].sub;
     document.getElementById("titulo-datos").innerText = textos[lang].datos;
@@ -149,9 +152,11 @@ function alternarModo() {
   if (body.style.backgroundColor === "rgb(18, 18, 18)" || body.style.backgroundColor === "#121212" || body.style.backgroundColor === "") {
     body.style.backgroundColor = "#f4f4f4";
     body.style.color = "#121212";
+    localStorage.setItem('modoOscuro', 'off');
   } else {
     body.style.backgroundColor = "#121212";
     body.style.color = "white";
+    localStorage.setItem('modoOscuro', 'on');
   }
 }
 
@@ -163,3 +168,17 @@ function alternarMusica() {
     musica.pause();
   }
 }
+
+// Cargar las preferencias guardadas apenas abre la página
+window.onload = function() {
+  const idiomaGuardado = localStorage.getItem('idiomaPreferido');
+  if (idiomaGuardado) {
+    cambiarIdioma(idiomaGuardado);
+  }
+
+  const modoGuardado = localStorage.getItem('modoOscuro');
+  if (modoGuardado === 'off') {
+    document.body.style.backgroundColor = "#f4f4f4";
+    document.body.style.color = "#121212";
+  }
+};
