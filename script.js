@@ -123,7 +123,6 @@ function cambiarIdioma(lang) {
   };
 
   if (textos[lang]) {
-    // Guardamos la preferencia de idioma en el navegador
     localStorage.setItem('idiomaPreferido', lang);
 
     document.getElementById("texto-principal").innerText = textos[lang].principal;
@@ -149,13 +148,11 @@ function cambiarIdioma(lang) {
 
 function alternarModo() {
   const body = document.body;
-  if (body.style.backgroundColor === "rgb(18, 18, 18)" || body.style.backgroundColor === "#121212" || body.style.backgroundColor === "") {
-    body.style.backgroundColor = "#f4f4f4";
-    body.style.color = "#121212";
+  body.classList.toggle('modo-claro');
+  
+  if (body.classList.contains('modo-claro')) {
     localStorage.setItem('modoOscuro', 'off');
   } else {
-    body.style.backgroundColor = "#121212";
-    body.style.color = "white";
     localStorage.setItem('modoOscuro', 'on');
   }
 }
@@ -169,7 +166,6 @@ function alternarMusica() {
   }
 }
 
-// Cargar las preferencias guardadas apenas abre la página
 window.onload = function() {
   const idiomaGuardado = localStorage.getItem('idiomaPreferido');
   if (idiomaGuardado) {
@@ -178,7 +174,6 @@ window.onload = function() {
 
   const modoGuardado = localStorage.getItem('modoOscuro');
   if (modoGuardado === 'off') {
-    document.body.style.backgroundColor = "#f4f4f4";
-    document.body.style.color = "#121212";
+    document.body.classList.add('modo-claro');
   }
 };
