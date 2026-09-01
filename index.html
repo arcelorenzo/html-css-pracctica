@@ -5,13 +5,13 @@
   <title>Mi Primera Página - Lorenzo</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #121212; color: white; font-family: sans-serif; margin: 0; padding-bottom: 50px;">
+<body>
 
   <!-- Reproductor de música de fondo -->
   <audio id="musica-fondo" loop src="musica.mp3.mp4"></audio>
 
   <!-- Botonera de Idiomas y el Lobichua con patitas -->
-  <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; margin: 20px auto; width: 90%; max-width: 900px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; border: 2px dashed #25d366;">
+  <div class="tarjeta" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
     
     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
       <img src="download20260802151622.png" alt="Lobichua" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #25d366; object-fit: cover;">
@@ -19,14 +19,14 @@
     </div>
 
     <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-      <button onclick="cambiarIdioma('es')" style="background: #2e7d32; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #81c784; cursor: pointer;">🇦🇷 ES</button>
-      <button onclick="cambiarIdioma('en')" style="background: #1565c0; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #64b5f6; cursor: pointer;">🇬🇧 EN</button>
-      <button onclick="cambiarIdioma('jp')" style="background: #c62828; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #ef5350; cursor: pointer;">🇯🇵 JP</button>
-      <button onclick="cambiarIdioma('pt')" style="background: #fbc02d; color: #1a1a1a; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #fff176; cursor: pointer;">🇧🇷 PT</button>
-      <button onclick="cambiarIdioma('it')" style="background: #2e7d32; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #81c784; cursor: pointer;">🇮🇹 IT</button>
-      <button onclick="cambiarIdioma('fr')" style="background: #1565c0; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #64b5f6; cursor: pointer;">🇫🇷 FR</button>
-      <button onclick="alternarModo()" style="background: #424242; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #bdbdbd; cursor: pointer;">🌓 Modo</button>
-      <button onclick="alternarMusica()" style="background: #e91e63; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #ff80ab; cursor: pointer;">🎵 Música</button>
+      <button onclick="cambiarIdioma('es')" style="background: #2e7d32; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #81c784;">🇦🇷 ES</button>
+      <button onclick="cambiarIdioma('en')" style="background: #1565c0; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #64b5f6;">🇬🇧 EN</button>
+      <button onclick="cambiarIdioma('jp')" style="background: #c62828; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #ef5350;">🇯🇵 JP</button>
+      <button onclick="cambiarIdioma('pt')" style="background: #fbc02d; color: #1a1a1a; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #fff176;">🇧🇷 PT</button>
+      <button onclick="cambiarIdioma('it')" style="background: #2e7d32; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #81c784;">🇮🇹 IT</button>
+      <button onclick="cambiarIdioma('fr')" style="background: #1565c0; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #64b5f6;">🇫🇷 FR</button>
+      <button onclick="alternarModo()" style="background: #424242; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #bdbdbd;">🌓 Modo</button>
+      <button onclick="alternarMusica()" style="background: #e91e63; color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold; border: 1px solid #ff80ab;">🎵 Música</button>
     </div>
   </div>
 
@@ -43,19 +43,19 @@
   </div>
 
   <!-- ABOUT ME -->
-  <div style="margin-top: 10px; width: 90%; max-width: 900px; margin-left: auto; margin-right: auto; padding: 20px; background: rgba(255, 255, 255, 0.08); border-radius: 12px; border: 2px solid #ffeb3b;">
+  <div class="tarjeta" style="border-color: #ffeb3b;">
     <h2 id="titulo-datos" style="font-size: 26px; color: #ffeb3b; margin-top: 0;">👤 Datos sobre mí:</h2>
     <ul style="font-size: 18px; line-height: 1.8; margin-bottom: 0; padding-left: 20px;">
-      <li><strong id="txt-nacimiento-lbl">Nacimiento:</strong> <span id="txt-nacimiento-val">9 de diciembre de 2007.</span></li>
+      <li><strong id="txt-nacimiento-lbl">Nacimiento:</strong> <span id="txt-nacimiento-val">9 de diciembre de 1999.</span></li>
       <li><strong id="txt-ubicacion-lbl">Ubicación:</strong> <span id="txt-ubicacion-val">Buenos Aires, Argentina 🇦🇷</span></li>
       <li><strong id="txt-educacion-lbl">Educación:</strong> <span id="txt-educacion-val">E.E.S. N°3.</span></li>
     </ul>
   </div>
 
   <!-- LO QUE ANDO HACIENDO -->
-  <div style="margin-top: 30px; width: 90%; max-width: 900px; margin-left: auto; margin-right: auto; padding: 0 20px; font-size: 18px; line-height: 1.8;">
-    <h2 id="titulo-haciendo" style="font-size: 28px; color: #ffeb3b;">Lo que ando haciendo:</h2>
-    <ul style="padding-left: 20px;">
+  <div class="tarjeta" style="border-color: #ffeb3b;">
+    <h2 id="titulo-haciendo" style="font-size: 28px; color: #ffeb3b; margin-top: 0;">Lo que ando haciendo:</h2>
+    <ul style="padding-left: 20px; margin-bottom: 0;">
       <li style="margin-bottom: 18px;">
         <strong id="txt-hobbies-lbl">Hobbies:</strong> <span id="txt-hobbies-val">Mirar ▶️ YouTube, 📷 Instagram, 🎵 TikTok o chatear en 🎮 Discord.</span>
       </li>
