@@ -1,6 +1,44 @@
+/* Estilos generales para el Modo Oscuro por defecto */
 body {
   background-color: #121212;
   color: #ffffff;
   font-family: sans-serif;
   margin: 0;
+  padding-bottom: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para cuando se active el Modo Claro */
+body.modo-claro {
+  background-color: #f4f4f4;
+  color: #121212;
+}
+
+body.modo-claro .tarjeta, 
+body.modo-claro .caja-redes {
+  background: rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos para las tarjetas y contenedores */
+.tarjeta {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 900px;
+  border: 2px dashed #25d366;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto hover copado para los botones */
+button {
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
